@@ -19,10 +19,91 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">
+                                Registration
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="ProductGroup">Product Groups</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="ProductBrand">Product Brands</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="StorageLocation">Storage Locations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="UnitMeasure">Unit Of Measure</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="Product">Products</a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="Country">Countries</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="State">States</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="City">Cities</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="Provider">Providers</a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="UserProfile">User Profiles</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Registration" asp-action="User">Users</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Privacy">
+                                Operation
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Operation" asp-action="ProductInput">Product Input</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Operation" asp-action="OutputProduct">Output Of Product</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Operation" asp-action="ProductRelease">Product Loss Release</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Operation" asp-action="Invetory">Inventory</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" asp-controller="Home" asp-action="Privacy">
+                                Reports
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Report" asp-action="StockPosition">Stock Position</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Report" asp-action="Resupply">Resupply</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Privacy">
+                                Graphics
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Graphic" asp-action="LosserMonth">Losser Per Month</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Graphic" asp-action="InputsAndOutputsPerMonth">Entries vesus Departures by month</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
