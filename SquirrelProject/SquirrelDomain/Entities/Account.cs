@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SquirrelUi.Models.Domain
+namespace SquirrelDomain.Entities
 {
     public class Account
     {
+        public int AccountId { get; set; }
         [Required(ErrorMessage = "Username is obrigatory")]
         [Display(Name = "Username")]
         [DataType(DataType.Text)]
@@ -11,12 +12,12 @@ namespace SquirrelUi.Models.Domain
 
 
         [Required(ErrorMessage = "Password is obrigatory")]
-        [Display(Name ="Passord")]
+        [Display(Name = "Passord")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
 
-        [Display(Name ="Remember Me")]
+        [Display(Name = "Remember Me")]
         public bool RememberMe { get; set; }
     }
 }
