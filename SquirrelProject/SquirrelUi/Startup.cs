@@ -19,6 +19,10 @@ namespace SquirrelUi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddAuthentication("CookieAuth").AddCookie("CookieAuth", opt => 
+            {
+                opt.Cookie.Name = "LoginAuthorization";
+            });
         }
 
         
@@ -38,6 +42,7 @@ namespace SquirrelUi
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
