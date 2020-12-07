@@ -37,6 +37,9 @@ namespace SquirrelUi
 
             services.AddScoped<ILoginService, LoginService>();
             services.AddScoped<ILoginRepository, LoginRepository>();
+
+            services.AddScoped<IProductGroupService, ProductGroupService>();
+            services.AddScoped<IProductGroupRepository, ProductGroupRepository>();
         }
 
         

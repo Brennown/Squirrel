@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SquirrelDomain.Entities;
 using SquirrelService.Interfaces;
-using SquirrelUi.Models.Domain;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -26,7 +26,7 @@ namespace SquirrelUi.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(AccountModel account)
+        public async Task<IActionResult> Login(Account account)
         {
             if (!ModelState.IsValid)
             {
@@ -50,7 +50,7 @@ namespace SquirrelUi.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private async Task Authentication(AccountModel account)
+        private async Task Authentication(Account account)
         {
             ClaimsIdentity identity = new ClaimsIdentity("CookieAuth");
             identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, $"{account.UserName}"));

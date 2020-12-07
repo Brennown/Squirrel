@@ -11,6 +11,7 @@ namespace SquirrelData.Context
         }
 
         public DbSet<Account> AccountDomains { get; set; }
+        public DbSet<ProductGroup>  ProductGroups  { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -22,6 +23,15 @@ namespace SquirrelData.Context
                 p.Property(x => x.UserName).HasColumnType("VARCHAR(30)").IsRequired();
                 p.Property(x => x.Password).HasColumnType("VARCHAR(30)").IsRequired();
                 p.Property(x => x.RememberMe).HasColumnType("BIT");
+            });
+
+            modelBuilder.Entity<ProductGroup>(p =>
+            {
+                p.ToTable("ProductGroup");
+                p.HasKey(x => x.ProductGroupId);
+                p.Property(x => x.ProductGroupId).IsRequired().ValueGeneratedOnAdd();
+                p.Property(x => x.Name).HasColumnType("VARCHAR(30)").IsRequired();
+                p.Property(x => x.Active).HasColumnType("BIT").IsRequired();
             });
         }
     }

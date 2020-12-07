@@ -17,4 +17,8 @@
     <ProjectReference Include="..\SquirrelService\SquirrelService.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Domain\" />
+  </ItemGroup>
+
 </Project>
